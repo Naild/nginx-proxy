@@ -10,7 +10,7 @@ services:
       - /var/run/docker.sock:/tmp/docker.sock:ro
       - ./certs:/etc/nginx/certs
     networks: 
-      - nginx-proxy
+      - web
 networks:
-  nginx-proxy:
+  web:
     external: true
