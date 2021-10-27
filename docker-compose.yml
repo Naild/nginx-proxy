@@ -2,7 +2,7 @@ version: '3.7'
 services: 
   nginx-proxy:
     image: jwilder/nginx-proxy:alpine 
-    container_name: reverse-proxy
+    container_name: web-proxy
     ports:
       - 80:80
       - 443:443
@@ -13,4 +13,5 @@ services:
       - web
 networks:
   web:
+    name: $PUBLIC_WEB
     external: true

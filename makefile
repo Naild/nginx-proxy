@@ -1,5 +1,5 @@
 up:
-	-@docker network create nginx-proxy
+	-@docker network create web
 	-@docker-compose up -d
 restart:
 	-@docker-compose restart
